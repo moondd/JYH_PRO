@@ -7,33 +7,26 @@ getx=b.position.x
 For i=0 to animationRange.end do  ( 
 
 	sliderTime = i;
-	b.position.x = getx; 
-	b.position.y = $Point001.position.y
-	b.position.z = $Point001.position.z
-	b.Rotation = $Point001.Rotation
+	b.position.x = $Root.position.y
+	b.position.y = $Root.position.x*-1
+	b.position.z = $Root.position.z
 	
 	)
 For i=0 to animationRange.end do  ( 
 
 	sliderTime = i;
-	b.position.x = getx; 
-	b.position.y = $Point001.position.y
-	b.position.z = $Point001.position.z
-	b.Rotation = $Point001.Rotation 
-
+	b.position.x = $Root.position.y
+	b.position.y = $Root.position.x*-1
+	b.position.z = $Root.position.z
+	
 	)
 
 	
-	For i=0 to animationRange.end do  ( 
-sliderTime = i;
-	$Bip001.Transform = b.Transform; 
-
-)
-
 For i=0 to animationRange.end do  ( 
-sliderTime = i;
-	$Root.position.x = $Point001.position.x; 
 
-)
+	sliderTime = i;
+	$Root.position = b.position
 
+	)
+	
 delete b
